@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equip="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кувшины</title>
+    <link rel="stylesheet" type="text/css" href="Kuvshin.css">
+    <script src="Kuvshin.js"></script>
+</head>
+<body>
+    <div id="main">
+        Введите вместимость большего кувшина
+        <br>
+        <input type="number" placeholder="0" id="bk">
+        <br>
+        Введите вместимость меньшего кувшина
+        <br>
+        <input type="number" placeholder="0" id="mk">
+        <br>
+        Введите сколько необходимо получить
+        <br>
+        <input type="number" placeholder="0" id="final">
+        <div id="place">
+            <div id="first">
+                <div id="kuvsh1">
+                    <div id="water_1"></div>
+                </div>
+                <div id="text_1">Сейчас в кувшине ... литров</div>
+            </div>
+            <div id="second">
+                <div id="kuvsh2">
+                    <div id="water_2"></div>
+                </div>
+                <div id="text_2">Сейчас в кувшине ... литров</div>
+            </div>
+        </div>
+        <button id="start">START</button>
+        <button id="stop">PAUSE/RESUME</button>
+        <button id="reset">RESET</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Заголовок страницы</title> 
+	<!--<link rel="stylesheet" type="text/css" href="style.css"> -->
+	<script src="index.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		.newdiv {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-image: url(пляж.jpg);
+			display: inline-block;
+		}
+
+		ol {
+			list-style: none;
+			counter-reset: li;
+		}
+
+		.li:before {
+			counter-increment: li;
+			content: counters(li,".") ". ";
+		}
+	</style>
+	<h1>Главный заголовок</h1>
+	<h6>Минимальный заголовок</h6>
+	<br>
+	Абзац
+	<p>Абзац</p>
+	<div>Абзац</div>
+	<!-- -->
+	<a href="https://html5book.ru/osnovy-html/?ysclid=m16n8k436576792916">Страница с гайд-буком</a>
+	<br>
+	<img src="пляж.jpg" width="389" height="255" alt="none">
+	<a href="https://html5book.ru/osnovy-html/?ysclid=m16n8k436576792916"><img src="пляж.jpg" width="389" height="255" alt="none"></a>
+	<ul>
+		<li>Первый пункт</li>
+		<ul>
+			<li>Первый пункт</li>
+			<li>Второй пункт</li>
+			<ul type="square">
+				<li>Первый пункт</li>
+			</ul>
+			<li>Третий пункт</li>
+		</ul>
+		<li>Второй пункт</li>
+	</ul>
+
+
+	<ol>
+		<li class="li">Первый пункт</li>
+		<li class="li">Второй пункт</li>
+		<li class="li">Третий пункт</li>
+		<ol>
+			<li class="li">Первый пункт</li>
+			<li class="li">Второй пункт</li>
+			<ol>
+				<li class="li">Первый пункт</li>
+				<li class="li">Второй пункт</li>
+				<li class="li">Третий пункт</li>
+			</ol>
+			<li class="li">Третий пункт</li>
+		</ol>
+	</ol>
+
+	<dl>
+		<dt>Первый термин</dt>
+		<dd>Его определение</dd>
+		<dt>Второй термин</dt>
+		<dd>Его опредление</dd>
+		<dd>Еще одно определение</dd>
+	</dl>
+
+	<div class="newdiv">
+		<table border="1" class='bt'>
+			<caption>
+				Status of the club members 2021
+			</caption>
+			<tr>
+				<th scope="col">Balance</th>
+				<th scope="col">Balance</th>
+				<th scope="col">Balance</th>
+				<th scope="col">Balance</th>
+			</tr>
+			<tr>
+				<td>Ячейка 1.1</td>
+				<td>Ячейка 1.2</td>
+				<td>Ячейка 1.3</td>
+			</tr>
+			<tr>
+				<td>Ячейка 2.1</td>
+				<td>Ячейка 2.2</td>
+				<td>Ячейка 2.3</td>
+				<td>Ячейка 2.3</td>
+			</tr>
+			<tr>
+				<td>Ячейка 1.1</td>
+				<td>Ячейка 1.2</td>
+				<td>Ячейка 1.3</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<button>Нажми меня</button>
+	<br><br><br>
+
+	<h1>Четвертое задание</h1>
+	<form>
+		<input type="text" id="name" name="student_name" placeholder="Name">
+		<br>
+		<input type="email" id="mail" name="student_email" placeholder="example@email.com">
+		<br>
+		<input type="password" id="password" name="student_password" placeholder="password">
+		<br>
+		<input type="date" id="birthday" name="sudent_birthday" placeholder="">
+		<br>
+		<select id="country" name="student_country">
+			<option value="smth" disabled>Выберите значение</option>
+			<option value="russia" selected>Российская Федерация</option>
+			<option value="tajikistan">Республика Таджикистан</option>
+			<option value="uzbekistan">Республика Узбекстан</option>
+		</select>
+		<br>
+		<div>Пол:</div>
+		<input type="radio" id="male" value="male" name="student_sex">
+		<label for="male">Мужской</label>
+		<br>
+		<label><input type="radio" id="female" value="female" name="student_sex">Женский</label>
+		<div>Предметы при поступлении:</div>
+		<label><input type="checkbox" id="name" value="informatika" name="exams" />Информатика</label>
+		<br>
+		<label><input type="checkbox" id="name" value="maths" name="emams" />Профильная математика</label>
+		<br>
+		<label><input type="checkbox" checked id="name" value="physics" name="emams" />Физика</label>
+		<br>
+		<label><input type="checkbox" checked id="name" value="russian" name="emams" />Русский язык</label>
+		<br>
+		<textarea id="text" name="student_text"></textarea>
+		<br>
+		<label class="form-upload__label" for="uploadForm_file">
+			<input class="form-upload__input" id="uploadForm_File" type="file" name="file_name">
+		</label>
+
+		<br>
+		<input type="range" min="0" max="20" name="volume" />Громкость
+		<br>
+		<div>
+			Выберите любимый цвет
+		</div>
+		<input type="color" name="color" />
+		<br>
+		<select name="select1" multiple>
+			<option value="one">Option1</option>
+			<option value="two">Option2</option>
+			<option value="three">Option3</option>
+			<option value="four">Option4</option>
+			<option value="five">Option5</option>
+			<option value="six" disabled>Option6</option>
+			<option value="seven">Option7</option>
+			<option value="eight">Option8</option>
+		</select>
+		<br>
+		<input type="reset" />
+		<button type="submit" class="form-upload__submit">Отправить</button>
+
+	</form>
+
+	<div><h1>Пятое задание </h1></div>
+	<input type="number" name="first_num" id="first_num"><br>
+	<input type="number" name="second_num" id="second_num"><br>
+	<input type="text" id="res" readonly>
+	<button id="result">Сложить числа</button>
+	
+</body>
+</html
