@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: 	#1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: none; /* Скрываем стандартный курсор */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    background-color:#808080;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#moving-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 35px;
+    transition: transform 0.2s ease;
+    background-blend-mode: overlay;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+.controls {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 24px;
+    background: #ffa31a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #4a5bd0;
+    transform: translateY(-2px);
+}
+
+.status, .difficulty-info {
+    margin-top: 15px;
+    color: 		#ffa31a;
+    font-size: 18px;
+    text-align: center;
+}
+
+h1 {
+    color: 		#ffa31a;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-panel {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: 		#ffa31a;
+    width: 80%;
+    max-width: 600px;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: #ff5722;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+}
+
+button:hover:not(:disabled) {
+    background: #808080;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.difficulty-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.difficulty-btn {
+    padding: 8px 16px;
+    background: #808080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.difficulty-btn.active {
+    background: #ffa31a;
+    box-shadow: 0 0 10px rgba(255, 161, 26, 0.5);
+}
+
+.lives-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.life {
+    width: 20px;
+    height: 20px;
+    background: 	#ffa31a;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.life.lost {
+    background: white;
+    transform: scale(0.8);
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}

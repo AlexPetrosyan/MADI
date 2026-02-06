@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТИРРР</title>
+    <link rel="stylesheet" type="text/css" href="range.css">
+    <script defer src="range.js"></script>
+</head>
+<body>
+    <h1>ТИРРРР</h1>
+    
+    <div class="container" id="container">
+        <img id="moving-image" src="Крольчиха.png" alt="Движущееся изображение" draggable="false">
+    </div>
+    
+    <div class="controls">
+        <button id="start-btn">Запуск</button>
+        <button id="pause-btn">Пауза</button>
+        <button id="reset-btn">Сброс</button>
+    </div>
+    
+    <div class="status" id="status">Статус: Ожидание запуска</div>
+    <div class = "difficulty-info">Уровень сложности: <span id="current-difficulty">Легкий</span></div>
+    <div class = "difficulty-info">Жизни: <span id="lives-count">7</span></div>
+    
+    <div class="info-panel">
+        <div>Всего попаданий: <span id="all-click">0</span></div>
+        <div>Попаданий за игру: <span id="current-click">0</span></div>
+        <div>Следующее изменение направления через: <span id="time-remaining">-</span> сек</div>
+        <div>Текущая скорость: <span id="current-speed">-</span></div>
+    </div>
+
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>
+
+    <div class="difficulty-selector">
+        <button class="difficulty-btn active" data-difficulty="easy">Легкий (7 жизней)</button>
+        <button class="difficulty-btn" data-difficulty="medium">Средний (5 жизней)</button>
+        <button class="difficulty-btn" data-difficulty="hard">Тяжелый (3 жизни)</button>
+    </div>
+
+    <div id="game-over" class="game-over hidden">
+        <h2>Игра окончена!</h2>
+        <p>У вас закончились жизни</p>
+        <p>Набрано очков: <span id="current-point">-</span></p>
+        <button id="restart-btn">Начать заново</button>
+    </div>
+</body>
+</html>
