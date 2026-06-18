@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoHUB</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="module" defer></script>
+</head>
+<body>
+    <div class="app">
+        <h1>VideoHUB</h1>
+        <div class="main-layout">
+            <div class="main-player-area">
+                <div class="channel-switcher">
+                    <button id="prevChannelBtn" class="control-btn channel-switch-btn" title="Предыдущий канал">
+                        <span class="icon icon-prev-channel"></span>
+                        <span class="btn-label">Предыдущий канал</span>
+                    </button>
+                    <button id="nextChannelBtn" class="control-btn channel-switch-btn" title="Следующий канал">
+                        <span class="icon icon-next-channel"></span>
+                        <span class="btn-label">Следующий канал</span>
+                    </button>
+                </div>
+                <div class="player-container">
+                    <div class="media-container" id="mainMediaContainer">
+                    </div>
+                    <div class="controls" id="mainControls">
+                        <button id="playPauseBtn" class="control-btn" title="Воспроизвести/Пауза">
+                            <span class="icon" id="playPauseIcon"></span>
+                        </button>
+                        <button id="prevBtn" class="control-btn" title="Предыдущий">
+                            <span class="icon icon-prev"></span>
+                        </button>
+                        <button id="nextBtn" class="control-btn" title="Следующий">
+                            <span class="icon icon-next"></span>
+                        </button>
+                        <div class="volume-control">
+                            <button id="muteBtn" class="control-btn volume-btn" title="Выключить звук">
+                                <span class="icon icon-volume-on"></span>
+                                <span class="icon icon-volume-off"></span>
+                            </button>
+                            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        <div class="autoplay-control">
+                            <label for="autoplayToggle">Автовоспр.</label>
+                            <input type="checkbox" id="autoplayToggle" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <span>Больше каналов</span>
+                    <div class="sidebar-nav">
+                        <button id="scrollUpBtn" title="Вверх" class="nav-btn">▲</button>
+                        <button id="scrollDownBtn" title="Вниз" class="nav-btn">▼</button>
+                    </div>
+                </div>
+                <div class="sidebar-body">
+                    <div class="channels-list" id="channelsList">
+                    </div>
+                    <div class="custom-scrollbar" id="customScrollbar">
+                        <div class="scrollbar-track" id="scrollbarTrack">
+                            <div class="scrollbar-thumb" id="scrollbarThumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

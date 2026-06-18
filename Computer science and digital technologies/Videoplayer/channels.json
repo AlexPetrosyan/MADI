@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Новости",
+        "media": [
+            { "src": "video/news1.mp4", "type": "video" },
+            { "src": "images/news2.jpg", "type": "image", "duration": 5 },
+            { "src": "video/news3.mp4", "type": "video" },
+            { "src": "video/news4.mp4", "type": "video" }
+        ]
+    },
+    {
+        "name": "Природа",
+        "media": [
+            { "src": "video/nature1.mp4", "type": "video" },
+            { "src": "images/nature2.jpeg", "type": "image", "duration": 7 },
+            { "src": "images/nature3.jpeg", "type": "image", "duration": 7 },
+            { "src": "video/nature4.mp4", "type": "video" }
+        ]
+    },
+    {
+        "name": "Технологии",
+        "media": [
+            { "src": "images/tech1.jpg", "type": "image", "duration": 4 }, 
+            { "src": "video/tech2.mp4", "type": "video" },
+            { "src": "images/tech3.jpg", "type": "image", "duration": 4 }
+        ]
+    },
+    {
+        "name": "Кувшины",
+        "media": [
+            { "src": "images/jug1.jpeg", "type": "image", "duration": 4 } 
+        ]
+    }
+]
+
