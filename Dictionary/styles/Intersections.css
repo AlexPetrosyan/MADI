@@ -1,0 +1,13 @@
+.intersections{
+    border:2px solid #ff9800; 
+    background:#fff3e0; 
+    margin-top:20px; 
+    padding:10px; 
+    border-radius:5px;
+}
+
+.inter-item{
+    margin-bottom: 15px; 
+    border-bottom: 1px dashed #ccc; 
+    padding-bottom: 8px;
+}
